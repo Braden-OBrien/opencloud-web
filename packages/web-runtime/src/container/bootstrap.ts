@@ -205,13 +205,10 @@ export const announceConfiguration = async ({
 
   configStore.loadConfig(rawConfig)
 
-  console.debug('Successfully loaded configuration', rawConfig);
-  console.debug('openIdConnect configuration is', configStore.openIdConnect);
-
-  injectGeneratorMeta(rawConfig); // Call this on its own line
-  injectGeneratorMeta(configStore.openIdConnect); // Call this on its own line
-
-  debugger; // The browser will freeze execution right here
+  console.debug('Successfully loaded configuration', rawConfig.shape);
+  console.debug('openIdConnect configuration is', configStore.openIdConnect.shape);
+  console.debug('opendIdStringified is', JSON.stringify(configStore.openIdConnect));
+  console.debug('opendIdStringified is', JSON.stringify(configStore.openIdConnect.shape));
 }
 
 /**
