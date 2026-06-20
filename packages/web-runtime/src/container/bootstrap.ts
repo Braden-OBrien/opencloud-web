@@ -204,6 +204,7 @@ export const announceConfiguration = async ({
   }
 
   configStore.loadConfig(rawConfig)
+  console.debug('Successfully loaded configuration')
 }
 
 /**
