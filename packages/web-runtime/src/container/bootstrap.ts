@@ -191,6 +191,8 @@ export const announceConfiguration = async ({
   })
 
   const rawConfig = RawConfigSchema.parse(data)
+  console.debug('path is', path);
+  console.debug('rawConfig Stringified is', JSON.stringify(rawConfig));
 
   const embedConfigFromQuery = getEmbedConfigFromQuery(
     rawConfig.options?.embed &&
@@ -207,7 +209,6 @@ export const announceConfiguration = async ({
 
   console.debug('opendIdStringified is', JSON.stringify(configStore.openIdConnect));
   console.debug('rawConfig Stringified is', JSON.stringify(rawConfig));
-  console.debug('configStore Stringified is', JSON.stringify(configStore));
 }
 
 /**
