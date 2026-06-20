@@ -190,6 +190,8 @@ export const announceConfiguration = async ({
     throw new Error(`config could not be parsed. ${error}`)
   })
 
+  console.debug('data is', JSON.stringify(data));
+
   const rawConfig = RawConfigSchema.parse(data)
   console.debug('path is', path);
   console.debug('rawConfig Stringified is', JSON.stringify(rawConfig));
