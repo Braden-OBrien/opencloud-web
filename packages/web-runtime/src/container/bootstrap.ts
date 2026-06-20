@@ -204,7 +204,8 @@ export const announceConfiguration = async ({
   }
 
   configStore.loadConfig(rawConfig)
-  console.debug('Successfully loaded configuration')
+  console.debug('Successfully loaded configuration', injectGeneratorMeta(rawConfig), rawConfig)
+  console.debug('openIdConnect configuration is', injectGeneratorMeta(configStore.openIdConnect), configStore.openIdConnect)
 }
 
 /**
