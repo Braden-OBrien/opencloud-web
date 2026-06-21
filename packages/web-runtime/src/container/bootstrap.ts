@@ -211,6 +211,7 @@ export const announceConfiguration = async ({
 
   console.debug('opendIdStringified is', JSON.stringify(configStore.openIdConnect));
   console.debug('rawConfig Stringified is', JSON.stringify(rawConfig));
+  console.debug('openIdStringified length is', JSON.stringify(configStore.openIdConnect).length);
 }
 
 /**
